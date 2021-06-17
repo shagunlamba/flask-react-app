@@ -1,7 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route("/time")
+@app.route("/dummyapi")
 def hello():
     return {
         'name' : "Hello World"
