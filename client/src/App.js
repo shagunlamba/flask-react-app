@@ -1,4 +1,8 @@
 import React, {useState, useEffect} from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import Register from './Components/Register/Register';
+import Login from './Components/Login/Login';
+import Home from './pages/HomePage/Home';
 
 function App() {
 
@@ -16,5 +20,28 @@ function App() {
     </div>
   );
 }
+
+
+// const App = () => {
+
+//   const [isAuth, setAuth] = useState(localStorage.getItem('user-info'));
+
+//   return (
+//     <>
+//     <Switch>
+//       <Route path="/" exact component={Home} />
+//       <Route path="/login" exact>
+//           <Login setAuth={setAuth} />
+//       </Route>
+//       <Route path="/register" exact component={Register} />
+//       {
+//         isAuth ?
+//         <Route path="/profile/:username" exact component={Home} /> :
+//         <Redirect to="/" />
+//       }
+//     </Switch>
+//     </>
+//   );
+// }
 
 export default App;
